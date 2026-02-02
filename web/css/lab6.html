@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a[target]{
+            background-color: yellow;
+        }
+        
+        input[type="text"]{
+            border: 1px solid gray;
+        }
+
+        [title~="highlight"]{
+            border: 5px solid yellow;
+        }
+
+        [class|="top"]
+        {
+            background-color: yellow;
+        }
+
+        [class^="test"]
+        {
+            background-color: yellow;
+        }
+
+         [class$="ayush"]
+        {
+            background-color: yellow;
+        }
+
+          [class*="vx"]
+        {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    a. css[attribute] selector <br>
+    <a href="" target="_blank">https://www.google.com</a> <br>
+    b. css[attribute="value"] selector <br>
+    name: <input type="text"> <br>
+    c. css[attribute~="value"]
+   
+  <p title="highlight">This paragraph will have a yellow background.</p>
+
+  <p title="text highlight big">
+    This one will also be yellow because it contains the word "highlight".
+  </p>
+
+  <p title="highlighted">
+    This will NOT be yellow (highlighted).
+  </p>
+    d. css[attribute|="value"] <br>
+    <p class="top">applied here (top)</p>
+    <p class="top-it">also applied here (top-it)</p>
+    e. css[attribute^="value"]
+    <p class="test-it">applied here (test-it)</p>
+    <p class="uptest">not applied here (uptest)</p>
+    f. css[attribute$="value"]
+    <p class="its-ayush">applied here (its ayush)</p>
+    <p class="ayush shah">not applied here (ayush shah)</p>
+    g. css[attribute*="value"]
+     <p class="cuvx">applied here (cuvx)</p>
+    <p class="cuxn">not applied here (cuxn)</p>
+
+
+</body>
+</html>
