@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <style>
+            div p{
+                background-color: red;
+            }      
+            h4>p{
+                background-color: green;
+            }
+            h5+p{
+                background-color: yellow;
+            }
+            h6~p{
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        a. Descendant selector <br>
+        <div>
+            <section>           
+                 <p>Descendant selector applied here</p>
+            </section>
+            <p>Descendant selector also applied here</p>
+        </div>
+            <p>Descendant selector not applied here (Out of div)</p>
+        b. Child selector <br>
+        <h4>
+            <p>Child selector applied here</p>
+            <section>           
+                 <p>Child selector not applied here (inside of section tag)</p>
+            </section></h4>
+        c. Adjacent sibling selector <br>
+        <h5></h5>
+            <p>Adjacent sibling selector applied here (1st p tag after h5)</p>
+            <p>Adjacent sibling selector not applied here (2nd p tag after h5)</p>
+        d. General sibling selector <br>
+        <h6></h6>
+        <p>General sibling selector applied here (1st p tagafter h6)</p>
+        <p>General sibling selector also applied here (2nd p tag after h6)</p>
+          
+
+    </body>
+</html>
