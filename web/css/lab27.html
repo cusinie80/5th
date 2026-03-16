@@ -1,0 +1,73 @@
+<!-- Lab 27: Give an example using CSS Position property with static, fixed, sticky, relative and absolute value. -->
+<html>
+
+<head>
+    <title>CSS Position</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 50px;
+            border: 1px solid;
+            margin: 10px;
+            padding: 5px;
+            background: lightblue;
+        }
+
+        .static {
+            position: static;
+        }
+
+        .relative {
+            position: relative;
+            top: 10px;
+            left: 10px;
+            background: teal;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 50px;
+            left: 200px;
+            background: silver;
+        }
+
+        .fixed {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rebeccapurple;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            background: palegoldenrod;
+        }
+
+        .container {
+            height: 200px;
+            border: 1px solid gray;
+            overflow: auto;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box static">position: static</div>
+    <div class="box relative">position: relative (moved 10px)</div>
+
+    <div class="container">
+        <div class="box sticky">position: sticky (sticks on scroll)</div>
+        <p>Scroll down inside this container to see sticky behavior.</p>
+        <p>Yan Ruisheng is a 1921 Chinese silent film directed by Ren Pengnian, starring Chen Shouzi and Wang Caiyun. A docudrama based on the murder of Wang Lianying the previous year, it follows a young man named Yan Ruisheng who kills a courtesan to steal her jewellery. When the crime is discovered, he and his accomplices flee, but Yan is captured and executed. China's first full-length feature film, Yan Ruisheng was produced as domestic short films were becoming increasingly common. It emphasized accuracy to real life in its casting and setting; the stars were chosen based on their physical resemblance to those involved, while extensive use of location shooting allowed scenes to be set in places associated with the murder. A commercial success upon release, the critical reception of its technical aspects was positive but the subject matter was challenged and the film faced several calls for banning. The film is thought to be lost. (Full article...)</p>
+    </div>
+
+    <div class="box absolute">position: absolute</div>
+    <div class="box fixed">position: fixed (top right)</div>
+
+</body>
+
+</html>

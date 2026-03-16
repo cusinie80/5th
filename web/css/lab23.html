@@ -1,0 +1,68 @@
+<!-- Lab 23: Design a webpage using CSS Overflow property. Make sure to explore values of overflow property which are hidden, visible, scroll and auto. -->
+<html>
+
+<head>
+    <title>CSS Overflow</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 60px;
+            border: 2px solid black;
+            margin: 30px;
+            padding: 10px;
+        }
+
+        .visible {
+            overflow: visible;
+            background-color: red;
+        }
+
+        .hidden {
+            overflow: hidden;
+            background-color: yellow;
+        }
+
+        .scroll {
+            overflow: scroll;
+            background-color: lime;
+        }
+
+        .auto {
+            overflow: auto;
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Overflow Property</h2>
+
+    <div class="box visible">
+        <b>visible</b><br>
+        overflow property is set to visible.[1111111111111111111111111111111111111111111111]
+    </div>
+
+    <div class="box hidden">
+        <b>hidden</b><br>
+        overflow property is set to hidden.[1111111111111111111111111111111111111111111111]    
+    </div>
+
+    <div class="box scroll">
+        <b>scroll</b><br>
+        overflow property is set to scroll.[1111111111111111111111111111111111111111111111]
+    </div>
+
+    <div class="box auto">
+        <b>auto</b><br>
+        overflow property is set to auto.[1111111111111111111111111111111111111111111111]
+    </div>
+
+    <div class="box auto">
+        <b>auto</b><br>
+        This text is to short for scrollbar to appear.
+    </div>
+
+</body>
+
+</html>
