@@ -1,0 +1,26 @@
+<!-- Lab 7: Write a java script program to demonstrate mouse event. You can use button, division, paragraph etc. -->
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #box {
+            width: 150px;
+            height: 100px;
+            background-color: red;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <p id="log">Event: None</p>
+    <script>
+        const box = document.getElementById("box");
+        const log = document.getElementById("log");
+        const showEvent = (event) => {
+            log.textContent = "Event: " + event.type;
+        };
+        box.addEventListener("click", showEvent);
+    </script>
+</body>
+</html>
