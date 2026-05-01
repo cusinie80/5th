@@ -1,0 +1,23 @@
+<!-- Lab 23: Create any two array of size 5 each and merge those arrays, extract element from position 4 to 8 of merged array, sort the merged array in ascending order. -->
+<html>
+<body>
+  <button onclick="runAll()">Run All Operations</button>
+  <p id="result"></p>
+  <script>
+    function runAll() {
+      var arr1 = [5, 3, 8, 1, 9];
+      var arr2 = [4, 7, 2, 6, 10];
+      var merged = arr1.concat(arr2);
+      var extracted = merged.slice(4, 8);
+      var sorted = merged.slice().sort(function(a, b) { return a - b; });
+      var out = "";
+      out += "Array 1: [" + arr1 + "]<br/>";
+      out += "Array 2: [" + arr2 + "]<br/>";
+      out += "Merged: [" + merged + "]<br/>";
+      out += "Extracted (pos 4 to 8): [" + extracted + "]<br/>";
+      out += "Sorted (ascending): [" + sorted + "]<br/>";
+      document.getElementById("result").innerHTML = out;
+    }
+  </script>
+</body>
+</html>

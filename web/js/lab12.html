@@ -1,0 +1,47 @@
+<!-- Lab 12: Write a java script code to demonstrate String methods like below -->
+<html>
+<body>
+  <input type="text" id="sentence1" placeholder="Enter a sentence" size="25" />
+  <button onclick="getLength()">Get Length</button>
+  <button onclick="toUpper()">Convert to Uppercase</button>
+  <button onclick="toLower()">Convert to Lowercase</button>
+  <br/>
+  <p id="result1"></p>
+  <input type="text" id="firstName" placeholder="Enter first name" size="25" />
+  <input type="text" id="lastName"  placeholder="Enter last name" size="25" />
+  <button onclick="concatNames()">Concat</button>
+  <br/>
+  <p id="result2"></p>
+  <input type="text" id="sentence2"   placeholder="Enter a sentence" size="25" />
+  <input type="text" id="startIndex"  placeholder="Enter start index" size="25" />
+  <input type="text" id="endIndex"    placeholder="Enter end index" size="25" />
+  <button onclick="sliceStr()">Slice</button>
+  <br/>
+  <p id="result3"></p>
+  <script>
+    function getLength() {
+      var s = document.getElementById("sentence1").value;
+      document.getElementById("result1").innerHTML += "Length: " + s.length + "<br/>";
+    }
+    function toUpper() {
+      var s = document.getElementById("sentence1").value;
+      document.getElementById("result1").innerHTML += s.toUpperCase() + "<br/>";
+    }
+    function toLower() {
+      var s = document.getElementById("sentence1").value;
+      document.getElementById("result1").innerHTML += s.toLowerCase() + "<br/>";
+    }
+    function concatNames() {
+      var f = document.getElementById("firstName").value;
+      var l = document.getElementById("lastName").value;
+      document.getElementById("result2").innerHTML += f.concat(" ", l) + "<br/>";
+    }
+    function sliceStr() {
+      var s     = document.getElementById("sentence2").value;
+      var start = parseInt(document.getElementById("startIndex").value);
+      var end   = parseInt(document.getElementById("endIndex").value);
+      document.getElementById("result3").innerHTML += s.slice(start, end) + "<br/>";
+    }
+  </script>
+</body>
+</html>

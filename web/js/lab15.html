@@ -1,0 +1,21 @@
+<!-- Lab 15: Write a java script code that ask user to take two string and checks them of equality. If both strings are equal then display the first string in uppercase else print two string are not equal. -->
+<html>
+<body>
+  <input type="text" id="str1" placeholder="Enter first string" size="25" />
+  <input type="text" id="str2" placeholder="Enter second string" size="25" />
+  <button onclick="checkEquality()">Check</button>
+  <br/><br/>
+  <p id="result"></p>
+  <script>
+    function checkEquality() {
+      var str1 = document.getElementById("str1").value;
+      var str2 = document.getElementById("str2").value;
+      if (str1 === str2) {
+        document.getElementById("result").innerHTML += str1.toUpperCase() + "<br/>";
+      } else {
+        document.getElementById("result").innerHTML += "Two strings are not equal" + "<br/>";
+      }
+    }
+  </script>
+</body>
+</html>

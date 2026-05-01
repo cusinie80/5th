@@ -1,0 +1,20 @@
+<!-- Lab 13: Write a java script program to declare variable as number and convert it into string. Check datatype using typeof operator. -->
+<html>
+<body>
+  <input type="text" id="numInput" placeholder="Enter a number" size="25" />
+  <button onclick="checkType()">Check & Convert</button>
+  <br/><br/>
+  <p id="result"></p>
+  <script>
+    function checkType() {
+      var num = document.getElementById("numInput").value;
+      var converted = Number(num);
+      document.getElementById("result").innerHTML +=
+        "Original value: " + num + "<br/>" +
+        "Type before conversion: " + typeof num + "<br/>" +
+        "After converting to Number: " + converted + "<br/>" +
+        "Type after conversion: " + typeof converted + "<br/><br/>";
+    }
+  </script>
+</body>
+</html>

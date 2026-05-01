@@ -1,0 +1,58 @@
+<!-- Lab 16: Provide example on all the inbuilt array handling methods -->
+<html>
+<body>
+  <input type="text" id="arrInput" placeholder="Enter comma separated values" size="30" />
+  <button onclick="initArray()">Create Array</button>
+  <span id="arrayDisplay"></span><br/><br/>
+  <button onclick="pushVal()">push()</button>
+  <input type="text" id="pushInput" placeholder="Value" size="10" />
+  <span id="r1"></span><br/>
+  <button onclick="popVal()">pop()</button>
+  <span id="r2"></span><br/>
+  <button onclick="shiftVal()">shift()</button>
+  <span id="r3"></span><br/>
+  <button onclick="unshiftVal()">unshift()</button>
+  <input type="text" id="unshiftInput" placeholder="Value" size="10" />
+  <span id="r4"></span><br/>
+  <button onclick="sliceVal()">slice()</button>
+  <input type="text" id="sliceStart" placeholder="Start" size="4" />
+  <input type="text" id="sliceEnd" placeholder="End" size="4" />
+  <span id="r6"></span><br/>
+  <button onclick="sortVal()">sort()</button>
+  <span id="r7"></span><br/>
+  <button onclick="reverseVal()">reverse()</button>
+  <span id="r8"></span><br/>
+  <button onclick="joinVal()">join()</button>
+  <input type="text" id="joinSep" placeholder="Separator" size="5" />
+  <span id="r9"></span><br/>
+  <button onclick="indexOfVal()">indexOf()</button>
+  <input type="text" id="indexInput" placeholder="Value" size="10" />
+  <span id="r10"></span><br/>
+  <button onclick="includesVal()">includes()</button>
+  <input type="text" id="includesInput" placeholder="Value" size="10" />
+  <span id="r11"></span><br/>
+  <button onclick="concatVal()">concat()</button>
+  <input type="text" id="concatInput" placeholder="Values" size="15" />
+  <span id="r12"></span><br/>
+  <script>
+    var arr = [];
+    function initArray() {
+      arr = document.getElementById("arrInput").value.split(",").map(v => v.trim());
+      document.getElementById("arrayDisplay").innerHTML = " [" + arr + "]";
+    }
+    function show(id, res) { document.getElementById(id).innerHTML = " -> " + JSON.stringify(res) + " | arr: [" + arr + "]"; }
+    function pushVal() { arr.push(document.getElementById("pushInput").value); show("r1", arr); }
+    function popVal() { show("r2", arr.pop()); }
+    function shiftVal() { show("r3", arr.shift()); }
+    function unshiftVal() { arr.unshift(document.getElementById("unshiftInput").value); show("r4", arr); }
+    function spliceVal() { show("r5", arr.splice(parseInt(document.getElementById("spliceIndex").value), parseInt(document.getElementById("spliceDelete").value))); }
+    function sliceVal() { show("r6", arr.slice(parseInt(document.getElementById("sliceStart").value), parseInt(document.getElementById("sliceEnd").value))); }
+    function sortVal() { arr.sort(); show("r7", arr); }
+    function reverseVal() { arr.reverse(); show("r8", arr); }
+    function joinVal() { show("r9", arr.join(document.getElementById("joinSep").value || ",")); }
+    function indexOfVal() { show("r10", arr.indexOf(document.getElementById("indexInput").value)); }
+    function includesVal() { show("r11", arr.includes(document.getElementById("includesInput").value)); }
+    function concatVal() { show("r12", arr.concat(document.getElementById("concatInput").value.split(",").map(v => v.trim()))); }
+  </script>
+</body>
+</html>

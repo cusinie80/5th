@@ -1,0 +1,19 @@
+<html>
+<body>
+  <input type="text" id="sentence"    placeholder="Enter a sentence" size="25" />
+  <input type="text" id="wordToFind"  placeholder="Enter word to replace" size="25" />
+  <input type="text" id="replacement" placeholder="Enter replacement word" size="25" />
+  <button onclick="doReplace()">Replace</button>
+  <br/>
+  <p id="result"></p>
+  <script>
+    function doReplace() {
+      var sentence    = document.getElementById("sentence").value;
+      var wordToFind  = document.getElementById("wordToFind").value;
+      var replacement = document.getElementById("replacement").value;
+      var result = sentence.replace(wordToFind, replacement);
+      document.getElementById("result").innerHTML = result;
+    }
+  </script>
+</body>
+</html>

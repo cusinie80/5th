@@ -1,0 +1,14 @@
+<!-- Lab 21: For the string "Web programming is fun to learn but at the same time programming is difficult too. Web programming is core course in BIM third semester". Find out no. of times a word programming is repeated. -->
+<html>
+<body>
+  <button onclick="countWord()">Count</button>
+  <p id="result"></p>
+  <script>
+    function countWord() {
+      var str = "Web programming is fun to learn but at the same time programming is difficult too. Web programming is core course in BIM third semester";
+      var count = str.match(/programming/gi).length;
+      document.getElementById("result").innerHTML = "String: " + str + "<br/>The word 'programming' is repeated " + count + " times.";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!-- Lab 19: Write a java script code to create a string which contain name of 5 students separated with comma. Convert the string into array and display the result. -->
+<html>
+<body>
+  <button onclick="convertToArray()">Convert to Array</button>
+  <p id="result"></p>
+  <script>
+    function convertToArray() {
+      var str = "Ayush,Bibek,Suman,Anita,Rohan";
+      var arr = str.split(",");
+      document.getElementById("result").innerHTML = "String: " + str + "<br/>Array: [" + arr.join(", ") + "]";
+    }
+  </script>
+</body>
+</html>

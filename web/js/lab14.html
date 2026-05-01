@@ -1,0 +1,15 @@
+<!-- Lab 14: Write a Java script program to take one string input from user and reverse the string. -->
+<html>
+<body>
+  <input type="text" id="strInput" placeholder="Enter a string" size="25" />
+  <button onclick="reverseStr()">Reverse</button>
+  <p id="result"></p>
+  <script>
+    function reverseStr() {
+      var str = document.getElementById("strInput").value;
+      var reversed = str.split("").reverse().join("");
+      document.getElementById("result").innerHTML += "Reversed: " + reversed + "<br/>";
+    }
+  </script>
+</body>
+</html>

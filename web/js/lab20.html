@@ -1,0 +1,23 @@
+<!-- Lab 20: For the string "web programming is amazing and exciting to learn". Find out length of string, reverse a string, search a word "exciting", remove extra white space if present, convert the string into array and display, find the character present on position 8, extract the part of the string from position 2 to 10, replace the word programming with technology -->
+<html>
+<body>
+  <button onclick="runAll()">Run All Operations</button>
+  <p id="result"></p>
+  <script>
+    function runAll() {
+      var str = "web programming is amazing and exciting to learn";
+      var out = "";
+      out += "Original: " + str + "<br/>";
+      out += "Length: " + str.length + "<br/>";
+      out += "Reversed: " + str.split("").reverse().join("") + "<br/>";
+      out += "Search 'exciting' at index: " + str.indexOf("exciting") + "<br/>";
+      out += "After trim: " + str.trim() + "<br/>";
+      out += "Array: [" + str.split(" ").join(", ") + "]<br/>";
+      out += "Char at position 8: " + str.charAt(8) + "<br/>";
+      out += "Slice(2,10): " + str.slice(2, 10) + "<br/>";
+      out += "Replace: " + str.replace("programming", "technology") + "<br/>";
+      document.getElementById("result").innerHTML = out;
+    }
+  </script>
+</body>
+</html>
